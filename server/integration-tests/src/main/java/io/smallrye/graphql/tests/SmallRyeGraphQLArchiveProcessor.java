@@ -30,6 +30,7 @@ public class SmallRyeGraphQLArchiveProcessor implements ApplicationArchiveProces
                     .resolve("io.smallrye:smallrye-graphql-servlet")
                     .withoutTransitivity()
                     .asFile();
+            
             // Make sure it's unique
             Set<File> dependenciesSet = new LinkedHashSet<>(Arrays.asList(dependencies));
             testDeployment.addAsLibraries(dependenciesSet.toArray(new File[] {}));
